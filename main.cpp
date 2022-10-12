@@ -94,7 +94,7 @@ int main()
 
                 if (start % 2 == 0)
                 {
-                    
+
                     cout << "\t" << start << endl;
                 }
 
@@ -222,7 +222,7 @@ int main()
                 cout << "guessed wrong\n";
                 (y > x) ? cout << "My number is less!\n" : cout << "My number is more!\n";
             }
-            
+
         }
         end = time(0);
         cout << "YOU'R RIGHT!!!" << endl;
@@ -231,8 +231,25 @@ int main()
     }break;
     case 6:
     {   cout << "\t\t\tSpecify the amount to be exchanged=>";
-        float many;
-        cin >> many;
+    float many;
+    cin >> many;
+    cout << "\t\t\t#>-------<Convert>----------<#" << endl;
+    cout << "\t\t\t|         1 - USD            |" << endl;
+    cout << "\t\t\t|         2 - EUR            |" << endl;
+    cout << "\t\t\t|         3 - UAN            |" << endl;
+    cout << "\t\t\t#>--------------------------<#" << endl;
+    cout << "\t\t\t|         Exit - 0           |" << endl;
+    cout << "\t\t\t#>--------------------------<#" << endl;
+    cout << "\t\t\tSpecify the convert currency =>";
+    int number;
+
+    double  usd, eur, uan;
+    cin >> number;
+    system("cls");
+    switch (number)
+    {
+    case 1:
+    {
         cout << "\t\t\t#>-------<Convert>----------<#" << endl;
         cout << "\t\t\t|         1 - USD            |" << endl;
         cout << "\t\t\t|         2 - EUR            |" << endl;
@@ -240,78 +257,154 @@ int main()
         cout << "\t\t\t#>--------------------------<#" << endl;
         cout << "\t\t\t|         Exit - 0           |" << endl;
         cout << "\t\t\t#>--------------------------<#" << endl;
-        cout << "\t\t\tSpecify the convert currency =>";
+        cout << "\t\t\tSpecify the required currency =>";
         int number;
-       
-        double  usd, eur, uan;
         cin >> number;
         system("cls");
         switch (number)
         {
         case 1:
         {
-            cout << "\t\t\t#>-------<Convert>----------<#" << endl;
-            cout << "\t\t\t|         1 - USD            |" << endl;
-            cout << "\t\t\t|         2 - EUR            |" << endl;
-            cout << "\t\t\t|         3 - UAN            |" << endl;
-            cout << "\t\t\t#>--------------------------<#" << endl;
-            cout << "\t\t\t|         Exit - 0           |" << endl;
-            cout << "\t\t\t#>--------------------------<#" << endl;
-            cout << "\t\t\tSpecify the required currency =>";
-            int number;
-            cin >> number;
-            system("cls");
-            switch (number)
-            {
-            case 1:
-            {
-                cout << many << "  USD";
-            }break;
-            case 2:
-            {
-                eur = (many * 1.028);
-                int sizeOfNumber = 0;
-                cout << "Number->";
-
-                int temp = eur;
-                do
-                {
-                    sizeOfNumber++;
-
-                    temp /= 10;
-                } while (temp);
-                cout.precision(sizeOfNumber + 2);
-                cout << eur << " EUR";
-
-            }break;
-            case 3:
-            {
-                uan = (many * 36.569);
-                int sizeOfNumber = 0;
-                cout << "Number->";
-
-                int temp = uan;
-                do
-                {
-                    sizeOfNumber++;
-
-                    temp /= 10;
-                } while (temp);
-                cout.precision(sizeOfNumber + 2);
-                cout << uan << " UAN";
-            }break;
-            }
+            cout << many << "  USD";
         }break;
         case 2:
         {
+            eur = (many * 1.031);
+            int sizeOfNumber = 0;
+            int temp = eur;
+            do
+            {
+                sizeOfNumber++;
+
+                temp /= 10;
+            } while (temp);
+            cout.precision(sizeOfNumber + 2);
+            cout << eur << " EUR";
+
+        }break;
+        case 3:
+        {
+            uan = (many * 36.569);
+            int sizeOfNumber = 0;
+            int temp = uan;
+            do
+            {
+                sizeOfNumber++;
+
+                temp /= 10;
+            } while (temp);
+            cout.precision(sizeOfNumber + 2);
+            cout << uan << " UAN";
+        }break;
+        }
+    }break;
+    case 2:
+    {
+        cout << "\t\t\t#>-------<Convert>----------<#" << endl;
+        cout << "\t\t\t|         1 - USD            |" << endl;
+        cout << "\t\t\t|         2 - EUR            |" << endl;
+        cout << "\t\t\t|         3 - UAN            |" << endl;
+        cout << "\t\t\t#>--------------------------<#" << endl;
+        cout << "\t\t\t|         Exit - 0           |" << endl;
+        cout << "\t\t\t#>--------------------------<#" << endl;
+        cout << "\t\t\tSpecify the required currency =>";
+        int number;
+        cin >> number;
+        system("cls");
+        switch (number)
+        {
+        case 1:
+        {
+            usd = (many * 0.969);
+            int sizeOfNumber = 0;
+
+            int temp = usd;
+            do
+            {
+                sizeOfNumber++;
+
+                temp /= 10;
+            } while (temp);
+            cout.precision(sizeOfNumber + 2);
+            cout << usd << " USD";
+        }break;
+        case 2:
+        {
+            cout << many << "  EUR";
+        }break;
+        case 3:
+        {
+
+            uan = (many * 35.459);
+            int sizeOfNumber = 0;
+
+            int temp = uan;
+            do
+            {
+                sizeOfNumber++;
+
+                temp /= 10;
+            } while (temp);
+            cout.precision(sizeOfNumber + 2);
+            cout << uan << " UAN";
+        }
+        }break;
+    case 3:
+    {
+        cout << "\t\t\t#>-------<Convert>----------<#" << endl;
+        cout << "\t\t\t|         1 - USD            |" << endl;
+        cout << "\t\t\t|         2 - EUR            |" << endl;
+        cout << "\t\t\t|         3 - UAN            |" << endl;
+        cout << "\t\t\t#>--------------------------<#" << endl;
+        cout << "\t\t\t|         Exit - 0           |" << endl;
+        cout << "\t\t\t#>--------------------------<#" << endl;
+        cout << "\t\t\tSpecify the required currency =>";
+        int number;
+        cin >> number;
+        system("cls");
+        switch (number)
+        {
+        case 1:
+        {
+            usd = (many * 0.027);
+            int sizeOfNumber = 0;
+            int temp = usd;
+            do
+            {
+                sizeOfNumber++;
+
+                temp /= 10;
+            } while (temp);
+            cout.precision(sizeOfNumber + 2);
+            cout << usd << " USD";
+        }break;
+        case 2:
+        {
+            eur = (many * 0.028);
+            int sizeOfNumber = 0;
+            int temp = eur;
+            do
+            {
+                sizeOfNumber++;
+
+                temp /= 10;
+            } while (temp);
+            cout.precision(sizeOfNumber + 2);
+            cout << eur << " EUR";
+        }break;
 
         }
-        }
+
+    }break;
+    }
+    }
 
 
     } break;
-    
 
-        return 0;
-   }
+
+
+    return 0;
+    }
+
 }
