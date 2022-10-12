@@ -230,9 +230,87 @@ int main()
         cout << "Time lost: " << end - start << " seconds" << endl;
     }break;
     case 6:
-    {
+    {   cout << "\t\t\tSpecify the amount to be exchanged=>";
+        float many;
+        cin >> many;
+        cout << "\t\t\t#>-------<Convert>----------<#" << endl;
+        cout << "\t\t\t|         1 - USD            |" << endl;
+        cout << "\t\t\t|         2 - EUR            |" << endl;
+        cout << "\t\t\t|         3 - UAN            |" << endl;
+        cout << "\t\t\t#>--------------------------<#" << endl;
+        cout << "\t\t\t|         Exit - 0           |" << endl;
+        cout << "\t\t\t#>--------------------------<#" << endl;
+        cout << "\t\t\tSpecify the convert currency =>";
+        int number;
        
+        double  usd, eur, uan;
+        cin >> number;
+        system("cls");
+        switch (number)
+        {
+        case 1:
+        {
+            cout << "\t\t\t#>-------<Convert>----------<#" << endl;
+            cout << "\t\t\t|         1 - USD            |" << endl;
+            cout << "\t\t\t|         2 - EUR            |" << endl;
+            cout << "\t\t\t|         3 - UAN            |" << endl;
+            cout << "\t\t\t#>--------------------------<#" << endl;
+            cout << "\t\t\t|         Exit - 0           |" << endl;
+            cout << "\t\t\t#>--------------------------<#" << endl;
+            cout << "\t\t\tSpecify the required currency =>";
+            int number;
+            cin >> number;
+            system("cls");
+            switch (number)
+            {
+            case 1:
+            {
+                cout << many << "  USD";
+            }break;
+            case 2:
+            {
+                eur = (many * 1.028);
+                int sizeOfNumber = 0;
+                cout << "Number->";
+
+                int temp = eur;
+                do
+                {
+                    sizeOfNumber++;
+
+                    temp /= 10;
+                } while (temp);
+                cout.precision(sizeOfNumber + 2);
+                cout << eur << " EUR";
+
+            }break;
+            case 3:
+            {
+                uan = (many * 36.569);
+                int sizeOfNumber = 0;
+                cout << "Number->";
+
+                int temp = uan;
+                do
+                {
+                    sizeOfNumber++;
+
+                    temp /= 10;
+                } while (temp);
+                cout.precision(sizeOfNumber + 2);
+                cout << uan << " UAN";
+            }break;
+            }
+        }break;
+        case 2:
+        {
+
+        }
+        }
+
+
     } break;
+    
 
         return 0;
    }
